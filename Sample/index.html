@@ -3,6 +3,7 @@
 <script>exports = {__esModule:true}</script>
 <script src="./index.js"></script>
 <body>
+
 <input type="text" id="city" placeholder="Enter city" />
 <input type="text" id="country" placeholder="Enter country" />
 <input type="number" id="population" placeholder="Enter population" />
@@ -11,8 +12,7 @@
 
 <br><br>
 <label>Search</label><br>
-<input type="text" id="search" placeholder="search..." />
-<button onclick="searchCity(document.getElementById('search').value)">search</button>
+<input type="text" id="search" placeholder="search..." onkeyup="searchCity(document.getElementById('search').value)"/>
 
 <div id="cityList">
 

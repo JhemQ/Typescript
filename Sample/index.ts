@@ -77,7 +77,6 @@ export const isValid = (isbn:string) => {
 //3. Change it up
 export const changeItUp = (value:string) => {
     let values:string = "abcdefghijklmnopqrstuvwxyz";
-    //let value2:string = "Cat30";
     let fvalue = value.toLowerCase();
     let convertedValue:string
     var finalConvertedValue = new String()
@@ -112,4 +111,7 @@ export const changeItUp = (value:string) => {
     console.log("Converted Value "+finalConvertedValue)
 }
 
-changeItUp("Jhem11");
+changeItUp("Cat30");
+
+//4. Moving zeros to the end
+

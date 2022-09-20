@@ -81,7 +81,6 @@ exports.isValid = isValid;
 //3. Change it up
 const changeItUp = (value) => {
     let values = "abcdefghijklmnopqrstuvwxyz";
-    //let value2:string = "Cat30";
     let fvalue = value.toLowerCase();
     let convertedValue;
     var finalConvertedValue = new String();
@@ -116,4 +115,5 @@ const changeItUp = (value) => {
     console.log("Converted Value " + finalConvertedValue);
 };
 exports.changeItUp = changeItUp;
-(0, exports.changeItUp)("Jhem11");
+(0, exports.changeItUp)("Cat30");
+//4. Moving zeros to the end
