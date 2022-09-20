@@ -43,7 +43,7 @@ export const searchCity = (search:string) => {
     }
 }
 
-//ISBN Validation
+//2. ISBN Validation
 export const isValid = (isbn:string) => {
     let validate = document.getElementById('validationResult')!;
     let result:number = 0;
@@ -72,4 +72,39 @@ export const isValid = (isbn:string) => {
         console.log(false + " Length should be 10")
         validate.innerText = isbn + " Invalid, Length should be 10";
     }
+}
+
+//3. Change it up
+export const changeItUp = (value:string) => {
+    let values:string = "abcdefghijklmnopqrstuvwxyz";
+    let value2:string = "Cat30";
+    let fvalue = value2.toLowerCase();
+    let convertedValue:string
+    var finalConvertedValue
+    for(let i = 0; i<value2.length; i++){
+        if(values.includes(fvalue.charAt(i))){
+            let index:number
+            index = values.indexOf(fvalue.charAt(i))
+            convertedValue = values.charAt(index+1)
+            switch(convertedValue){
+                case 'a':
+                    convertedValue.toUpperCase()
+                    break;
+                case 'e':
+                    convertedValue.toUpperCase()
+                    break;
+                case 'i':
+                    convertedValue.toUpperCase()
+                    break;
+                case 'o':
+                    convertedValue.toUpperCase()
+                    break;
+                case 'u':
+                    convertedValue.toUpperCase()
+                    break;
+            }
+            finalConvertedValue = finalConvertedValue + convertedValue;
+        }
+    }
+    console.log("Converted Value "+finalConvertedValue)
 }
