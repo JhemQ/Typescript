@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.isValid = exports.searchCity = exports.displayCities = exports.addCity = void 0;
+exports.changeItUp = exports.isValid = exports.searchCity = exports.displayCities = exports.addCity = void 0;
 var cities = [];
 var countries = [];
 var populations = [];
@@ -44,7 +44,7 @@ const searchCity = (search) => {
     }
 };
 exports.searchCity = searchCity;
-//ISBN Validation
+//2. ISBN Validation
 const isValid = (isbn) => {
     let validate = document.getElementById('validationResult');
     let result = 0;
@@ -78,3 +78,39 @@ const isValid = (isbn) => {
     }
 };
 exports.isValid = isValid;
+//3. Change it up
+const changeItUp = (value) => {
+    let values = "abcdefghijklmnopqrstuvwxyz";
+    let value2 = "Cat30";
+    let fvalue = value2.toLowerCase();
+    let convertedValue;
+    var finalConvertedValue;
+    for (let i = 0; i < value2.length; i++) {
+        if (values.includes(fvalue.charAt(i))) {
+            let index;
+            index = values.indexOf(fvalue.charAt(i));
+            convertedValue = values.charAt(index + 1);
+            switch (convertedValue) {
+                case 'a':
+                    convertedValue.toUpperCase();
+                    break;
+                case 'e':
+                    convertedValue.toUpperCase();
+                    break;
+                case 'i':
+                    convertedValue.toUpperCase();
+                    break;
+                case 'o':
+                    convertedValue.toUpperCase();
+                    break;
+                case 'u':
+                    convertedValue.toUpperCase();
+                    break;
+            }
+            finalConvertedValue = finalConvertedValue + convertedValue;
+        }
+    }
+    console.log("Converted Value " + finalConvertedValue);
+};
+exports.changeItUp = changeItUp;
+(0, exports.changeItUp)("Cat30");
