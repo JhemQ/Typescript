@@ -80,6 +80,8 @@ export const changeItUp = (value:string) => {
     let fvalue = value.toLowerCase();
     let convertedValue:string
     var finalConvertedValue = new String()
+    console.log("Change it up")
+    console.log("from: " + value)
     for(let i = 0; i<value.length; i++){
         if(values.includes(fvalue.charAt(i))){
             let index:number
@@ -108,10 +110,12 @@ export const changeItUp = (value:string) => {
             finalConvertedValue = finalConvertedValue.concat(fvalue.charAt(i))
         }
     }
-    console.log("Converted Value "+finalConvertedValue)
+    console.log("Converted Value: "+finalConvertedValue)
 }
 
 changeItUp("Cat30");
 
 //4. Moving zeros to the end
-
+console.log("Moving zeros to the end")
+var arr = [false, 1, 0, 1, 2, 0, 1, 3, "a"]
+console.log(arr.filter(val => val !== 0).concat(arr.filter(zeros => zeros == 0)))
