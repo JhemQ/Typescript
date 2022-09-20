@@ -81,36 +81,39 @@ exports.isValid = isValid;
 //3. Change it up
 const changeItUp = (value) => {
     let values = "abcdefghijklmnopqrstuvwxyz";
-    let value2 = "Cat30";
-    let fvalue = value2.toLowerCase();
+    //let value2:string = "Cat30";
+    let fvalue = value.toLowerCase();
     let convertedValue;
-    var finalConvertedValue;
-    for (let i = 0; i < value2.length; i++) {
+    var finalConvertedValue = new String();
+    for (let i = 0; i < value.length; i++) {
         if (values.includes(fvalue.charAt(i))) {
             let index;
             index = values.indexOf(fvalue.charAt(i));
             convertedValue = values.charAt(index + 1);
             switch (convertedValue) {
                 case 'a':
-                    convertedValue.toUpperCase();
+                    convertedValue = convertedValue.toUpperCase();
                     break;
                 case 'e':
-                    convertedValue.toUpperCase();
+                    convertedValue = convertedValue.toUpperCase();
                     break;
                 case 'i':
-                    convertedValue.toUpperCase();
+                    convertedValue = convertedValue.toUpperCase();
                     break;
                 case 'o':
-                    convertedValue.toUpperCase();
+                    convertedValue = convertedValue.toUpperCase();
                     break;
                 case 'u':
-                    convertedValue.toUpperCase();
+                    convertedValue = convertedValue.toUpperCase();
                     break;
             }
-            finalConvertedValue = finalConvertedValue + convertedValue;
+            finalConvertedValue = finalConvertedValue.concat(convertedValue);
+        }
+        else {
+            finalConvertedValue = finalConvertedValue.concat(fvalue.charAt(i));
         }
     }
     console.log("Converted Value " + finalConvertedValue);
 };
 exports.changeItUp = changeItUp;
-(0, exports.changeItUp)("Cat30");
+(0, exports.changeItUp)("Jhem11");

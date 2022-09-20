@@ -77,36 +77,39 @@ export const isValid = (isbn:string) => {
 //3. Change it up
 export const changeItUp = (value:string) => {
     let values:string = "abcdefghijklmnopqrstuvwxyz";
-    let value2:string = "Cat30";
-    let fvalue = value2.toLowerCase();
+    //let value2:string = "Cat30";
+    let fvalue = value.toLowerCase();
     let convertedValue:string
-    var finalConvertedValue
-    for(let i = 0; i<value2.length; i++){
+    var finalConvertedValue = new String()
+    for(let i = 0; i<value.length; i++){
         if(values.includes(fvalue.charAt(i))){
             let index:number
             index = values.indexOf(fvalue.charAt(i))
             convertedValue = values.charAt(index+1)
             switch(convertedValue){
                 case 'a':
-                    convertedValue.toUpperCase()
+                    convertedValue = convertedValue.toUpperCase()
                     break;
                 case 'e':
-                    convertedValue.toUpperCase()
+                    convertedValue = convertedValue.toUpperCase()
                     break;
                 case 'i':
-                    convertedValue.toUpperCase()
+                    convertedValue = convertedValue.toUpperCase()
                     break;
                 case 'o':
-                    convertedValue.toUpperCase()
+                    convertedValue = convertedValue.toUpperCase()
                     break;
                 case 'u':
-                    convertedValue.toUpperCase()
+                    convertedValue = convertedValue.toUpperCase()
                     break;
             }
-            finalConvertedValue = finalConvertedValue + convertedValue;
+            finalConvertedValue = finalConvertedValue.concat(convertedValue);
+        }
+        else{
+            finalConvertedValue = finalConvertedValue.concat(fvalue.charAt(i))
         }
     }
     console.log("Converted Value "+finalConvertedValue)
 }
 
-changeItUp("Cat30");
+changeItUp("Jhem11");
