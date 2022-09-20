@@ -108,3 +108,5 @@ export const changeItUp = (value:string) => {
     }
     console.log("Converted Value "+finalConvertedValue)
 }
+
+changeItUp("Cat30");
