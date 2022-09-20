@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<script>exports = {__esModule:true}</script>
+<script src="./index.js"></script>
+<body>
+<input type="text" id="city" placeholder="Enter city" />
+<input type="text" id="country" placeholder="Enter country" />
+<input type="number" id="population" placeholder="Enter population" />
+<button onclick="addCity(document.getElementById('city').value,
+     document.getElementById('country').value, document.getElementById('population').value)" >Add city</button>
+
+<br><br>
+<label>Search</label><br>
+<input type="text" id="search" placeholder="search..." />
+<button onclick="searchCity(document.getElementById('search').value)">search</button>
+
+<div id="cityList">
+
+</div>
+<br>
+<label>ISBN Validation</label><br>
+<input type="text" id="validate" placeholder="enter value..." />
+<button onclick="isValid(document.getElementById('validate').value)">validate</button>
+
+<div id="validationResult">
+    
+</div>
+</body>
+</html>
